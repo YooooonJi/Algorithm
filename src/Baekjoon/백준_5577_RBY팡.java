@@ -192,7 +192,7 @@ public class 백준_5577_RBY팡 {
 	static void del(int start,int idx,int cnt) {
 		//끝까지 확인했을 때
 	//	System.out.println(start+" "+idx+" "+cnt+" "+(list.size()-1));
-		if(idx>list.size()-1) {
+		if(idx>list.size()-1) { 
 			return;
 		}
 		if(idx==(list.size()-1)) {
