@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 public class SW_1949_등산로조성 {
 	
-	static int T,N,K,maxNum=Integer.MIN_VALUE;
+	static int T,N,K,maxNum=Integer.MIN_VALUE,maxDepth=Integer.MIN_VALUE;
 	static int arr[][];
 	static int dx[]= {-1,1,0,0};
 	static int dy[]= {0,0,-1,1};
@@ -24,6 +24,8 @@ public class SW_1949_등산로조성 {
 			N=Integer.parseInt(st.nextToken());
 			K=Integer.parseInt(st.nextToken());
 			
+			maxNum=Integer.MIN_VALUE;
+			maxDepth=Integer.MIN_VALUE;
 			arr=new int[N][N];
 			visited=new boolean[N][N];
 			
@@ -38,14 +40,32 @@ public class SW_1949_등산로조성 {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j <N; j++) {
 					if(maxNum==arr[i][j]) {
+						for (int i2 = 0; i2 <N; i2++) {
+							for (int j2 = 0; j2 <N; j2++) {
+								int tmpHeight=arr[i2][j2];
+								for (int k = 0; k <= K; k++) {
+									arr[i2][j2]-=k;
+									visited[i][j]=true;
+									dfs(i,j,1);
+									visited=new boolean[N][N];
+									//System.out.println();	
+									arr[i2][j2]=tmpHeight;
+								}
+							}
+						}
+						
+						
+						for (int k = 0; k <= K; k++) {
 						//bfs(i,j);
 						visited[i][j]=true;
 						dfs(i,j,1);
 						visited=new boolean[N][N];
-						System.out.println();
+						//System.out.println();
+						}
 					}
 				}
 			}
+			System.out.println(maxDepth);
 			
 			
 		}
@@ -60,7 +80,7 @@ public class SW_1949_등산로조성 {
 		while(!queue.isEmpty()) {
 			Point now=queue.poll();
 			visited[now.x][now.y]=true;
-			System.out.print(arr[now.x][now.y]);
+			//System.out.print(arr[now.x][now.y]);
 			for (int i = 0; i < 4; i++) {
 				int nx=now.x+dx[i];
 				int ny=now.y+dy[i];
@@ -76,7 +96,8 @@ public class SW_1949_등산로조성 {
 	}
 	
 	static void dfs(int x,int y,int depth) {
-		System.out.print(depth);
+		//System.out.print(depth);
+		maxDepth=Math.max(maxDepth,depth);
 		for (int i = 0; i < 4; i++) {
 			int nx=x+dx[i];
 			int ny=y+dy[i];
@@ -89,7 +110,7 @@ public class SW_1949_등산로조성 {
 			}
 			
 		}
-		System.out.println();
+		//System.out.println();
 	}
 
 	static public class Point{
