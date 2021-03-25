@@ -27,12 +27,7 @@ public class 백준_5577_RBY팡 {
 			list.clear();
 			list.addAll(tmp_list);
 			visited=new boolean[list.size()];
-			//System.out.println(i+"번째#####################");
-//			for (int j = 0; j <list.size(); j++) {
-//				System.out.print(list.get(j));
-//			}
-			//System.out.println();
-			//System.out.println("-----------------------------------");
+
 			if(N<=3) {
 				min=N;
 				break;
@@ -40,10 +35,7 @@ public class 백준_5577_RBY팡 {
 			if(i==0) {
 				list.set(i, list.get(i+1));
 				while(flag1!=true) {
-//					for (int j = 0; j <list.size(); j++) {
-//						System.out.print(list.get(j));
-//					}
-//					System.out.println();
+
 					Arrays.fill(visited, false);
 					check(0,1);
 					
@@ -52,10 +44,6 @@ public class 백준_5577_RBY팡 {
 			else if(i==N-1) {
 				list.set(i, list.get(N-2));
 				while(flag1!=true) {
-//					for (int j = 0; j <list.size(); j++) {
-//						System.out.print(list.get(j));
-//					}
-//					System.out.println();
 					Arrays.fill(visited, false);
 					check(0,1);
 					}
@@ -63,16 +51,11 @@ public class 백준_5577_RBY팡 {
 			else {
 				list.set(i, list.get(i-1));
 				while(flag1!=true) {
-//					for (int j = 0; j <list.size(); j++) {
-//						System.out.print(list.get(j));
-//					}
-//					System.out.println();
 					Arrays.fill(visited, false);
 					check(0,1);
 					}
 				if(answer!=0) {
 					min=Math.min(answer,min);
-					//System.out.println("answer:"+answer);
 					}				
 				flag1=false;
 				list.clear();
@@ -82,10 +65,6 @@ public class 백준_5577_RBY팡 {
 				if(list.get(i-1)!=list.get(i+1)) {
 				list.set(i, list.get(i+1));
 				while(flag1!=true) {
-//					for (int j = 0; j <list.size(); j++) {
-//						System.out.print(list.get(j));
-//					}
-//					System.out.println();
 					Arrays.fill(visited, false);
 					check(0,1);
 					}
@@ -94,7 +73,6 @@ public class 백준_5577_RBY팡 {
 			
 			if(answer!=0) {
 			min=Math.min(answer,min);
-//			System.out.println("answer:"+answer);
 			}
 		}
 		
@@ -104,8 +82,6 @@ public class 백준_5577_RBY팡 {
 	}
 	
 	static void check(int idx,int cnt) {
-		//System.out.println(idx+" "+(list.size()-1));
-		//System.out.println("리스트사이즈"+list.size());
 		if(list.size()<=3) {
 			flag1=true;
 			answer=list.size();
@@ -118,10 +94,6 @@ public class 백준_5577_RBY팡 {
 		}
 		if(idx==list.size()-1) {
 			if(cnt>=4) {
-//				for (int i = 0; i < visited.length; i++) {
-//					System.out.print(visited[i]+" ");
-//				}
-//				System.out.println();
 				del(0,0,1);
 				return;				
 			}
@@ -138,10 +110,6 @@ public class 백준_5577_RBY팡 {
 		}
 		else {
 			if(cnt>=4) {
-//				for (int i = 0; i < visited.length; i++) {
-//					System.out.print(visited[i]+" ");
-//				}
-				//System.out.println();
 				del(0,0,1);
 				return;
 			}
@@ -152,52 +120,13 @@ public class 백준_5577_RBY팡 {
 		}
 	}
 	
-	
-//	static void check() {
-//		
-//		boolean flag=true;
-//		boolean avail=false;
-//		int cnt=0;
-//		int number=0;
-//		visited=new boolean[N];
-//		
-//		while(flag) {
-//			for (int i = number; i <N-1; i++) {
-//				if(arr[i]==arr[i+1]) {
-//					avail=true;
-//					visited[i]=visited[i+1]=true;
-//					cnt++;
-//					flag=true;
-//				}
-//				else {
-//					if(cnt>=3) {
-//						del();
-//						cnt=0;
-//						number=0;
-//					}
-//					else {
-//						if(i==N-1) {
-//							answer=N;
-//							flag=false;
-//						}
-//						number=i;
-//					}
-//					break;
-//				}
-//			}
-//		}
-//		
-//	}
-	
 	static void del(int start,int idx,int cnt) {
 		//끝까지 확인했을 때
-	//	System.out.println(start+" "+idx+" "+cnt+" "+(list.size()-1));
 		if(idx>list.size()-1) { 
 			return;
 		}
 		if(idx==(list.size()-1)) {
-			if(visited[idx]==true&&cnt>=4) {
-				//System.out.println("cnt"+cnt+"start "+start);
+			if(visited[idx]==true&&cnt>=4) {;
 				for (int i =start; i <(start+cnt-1); i++) {
 					list.remove(start);
 				}
@@ -208,11 +137,9 @@ public class 백준_5577_RBY팡 {
 		if(visited[idx]==false) {
 			//같은거 4개이상 찾았을때
 			if(cnt>=5) {
-//				System.out.println("cnt"+cnt+"start "+start);
 				for (int i =start; i <(start+cnt-1); i++) {
 					list.remove(start);
 				}
-//				System.out.println("size:"+list.size());
 				//지운만큼 N 바꿈
 				return;
 			}

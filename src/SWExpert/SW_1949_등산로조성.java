@@ -45,6 +45,17 @@ public class SW_1949_등산로조성 {
 								int tmpHeight=arr[i2][j2];
 								for (int k = 0; k <= K; k++) {
 									arr[i2][j2]-=k;
+									if(arr[i2][j2]<0) {
+										arr[i2][j2]=0;
+									}
+//									for (int k2 = 0; k2 < N; k2++) {
+//										for (int l = 0; l < N; l++) {
+//											System.out.print(arr[k2][l]+" ");
+//										}
+//										System.out.println();
+//									}
+//									System.out.println();
+//									
 									visited[i][j]=true;
 									dfs(i,j,1);
 									visited=new boolean[N][N];
@@ -97,6 +108,7 @@ public class SW_1949_등산로조성 {
 	
 	static void dfs(int x,int y,int depth) {
 		//System.out.print(depth);
+		
 		maxDepth=Math.max(maxDepth,depth);
 		for (int i = 0; i < 4; i++) {
 			int nx=x+dx[i];
