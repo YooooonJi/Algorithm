@@ -1,5 +1,9 @@
 # Algorithm
 
+##다시 풀 문제들
+
+https://docs.google.com/spreadsheets/d/1PI293CokxqlaD_LEAu-mzWYe8wNswGLXaXWLx89qZqU/edit#gid=1386834576
+
 ## 1. Baekjoon
 
 |문제번호|문제이름|문제유형|날짜|Re|
