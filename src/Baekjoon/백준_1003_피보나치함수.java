@@ -17,6 +17,8 @@ public class 백준_1003_피보나치함수 {
 			cnt=new int[2];
 			//fibonacci(N);
 			
+			arr[0]=0;
+			arr[1]=1;
 			for (int i = 0; i <=N; i++) {
 				if(i==0||i==1) {
 					arr[i]=i;
