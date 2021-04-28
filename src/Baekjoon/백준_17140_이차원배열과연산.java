@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_17140_ÀÌÂ÷¿ø¹è¿­°ú¿¬»ê {
+public class ë°±ì¤€_17140_ì´ì°¨ì›ë°°ì—´ê³¼ì—°ì‚° {
 	static int r, c, k, row, col, time;
 	static int arr[][];
 	static int cnt[];
@@ -49,7 +49,7 @@ public class ¹éÁØ_17140_ÀÌÂ÷¿ø¹è¿­°ú¿¬»ê {
 			}
 		}
 
-		// Ã³À½¿¡´Â row,colÀº 3
+		// Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ row,colï¿½ï¿½ 3
 		row = col = 3;
 
 		while (time <= 100) {
@@ -58,28 +58,28 @@ public class ¹éÁØ_17140_ÀÌÂ÷¿ø¹è¿­°ú¿¬»ê {
 			int maxRow = Integer.MIN_VALUE;
 
 			if (row >= r && col >= c) {
-				// k¿Í °°À»°æ¿ì
+				// kï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if (arr[r][c] == k) {
 					System.out.println(time);
 					return;
 				}
 			}
 
-			// 1.Çà>=¿­
+			// 1.ï¿½ï¿½>=ï¿½ï¿½
 			if (row >= col) {
 				for (int i = 1; i <= row; i++) {
 					HashSet<Integer> used=new HashSet<Integer>();
 					cnt = new int[101];
 					for (int j = 1; j <= col; j++) {
 						if (arr[i][j] != 0) {
-							// ÇØ´çÇÏ´Â numÀÇ cnt 1 Áõ°¡
+							// ï¿½Ø´ï¿½ï¿½Ï´ï¿½ numï¿½ï¿½ cnt 1 ï¿½ï¿½ï¿½ï¿½
 							cnt[arr[i][j]]++;
-							// numÀúÀå
+							// numï¿½ï¿½ï¿½ï¿½
 							used.add(arr[i][j]);
 						}
 					}
 
-					// ÄÃ·³¿¡ ÀÖ´ø numµé ¿ì¼±¼øÀ§Å¥¿¡ ÀúÀå
+					// ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ numï¿½ï¿½ ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 					for (Integer integer : used) {
 						pq.add(new Point(integer, cnt[integer]));
 					}
@@ -88,39 +88,39 @@ public class ¹éÁØ_17140_ÀÌÂ÷¿ø¹è¿­°ú¿¬»ê {
 					while (!pq.isEmpty()) {
 						if(nowLength>100) break;
 						Point nowPoint = pq.poll();
-						// ¹è¿­¿¡ Ãß°¡
+						// ï¿½è¿­ï¿½ï¿½ ï¿½ß°ï¿½
 						arr[i][nowLength++] = nowPoint.num;
 						arr[i][nowLength++] = nowPoint.cnt;
 					}
 					
-					// »õ·Î µé¾î°£ ¼ö ±æÀÌ°¡ ÀÌÀüº¸´Ù ÀÛÀ»°æ¿ì 0À¸·Î ¹Ù²ãÁÜ
+					// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½î°£ ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½
 					if (nowLength <= col) {
 						for (int j = nowLength; j <= col; j++) {
 							arr[i][j] = 0;
 						}
 					}
 
-					// ÃÖ´ë col
+					// ï¿½Ö´ï¿½ col
 					maxCol = Math.max(nowLength-1, maxCol);
 				}
 				col = maxCol;
 			}
 
-			// 2.Çà<¿­
+			// 2.ï¿½ï¿½<ï¿½ï¿½
 			else if (row < col) {
 				for (int i = 1; i <= col; i++) {
 					HashSet<Integer> used=new HashSet<Integer>();
 					cnt = new int[101];
 					for (int j = 1; j <= row; j++) {
 						if (arr[j][i] != 0) {
-							// ÇØ´çÇÏ´Â numÀÇ cnt 1 Áõ°¡
+							// ï¿½Ø´ï¿½ï¿½Ï´ï¿½ numï¿½ï¿½ cnt 1 ï¿½ï¿½ï¿½ï¿½
 							cnt[arr[j][i]]++;
-							// numÀúÀå
+							// numï¿½ï¿½ï¿½ï¿½
 							used.add(arr[j][i]);
 						}
 					}
 
-					// ÄÃ·³¿¡ ÀÖ´ø numµé ¿ì¼±¼øÀ§Å¥¿¡ ÀúÀå
+					// ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ numï¿½ï¿½ ï¿½ì¼±ï¿½ï¿½ï¿½ï¿½Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 					for (Integer integer : used) {
 						pq.add(new Point(integer, cnt[integer]));
 					}
@@ -129,19 +129,19 @@ public class ¹éÁØ_17140_ÀÌÂ÷¿ø¹è¿­°ú¿¬»ê {
 					while (!pq.isEmpty()) {
 						if(nowLength>100) break;
 						Point nowPoint = pq.poll();
-						// ¹è¿­¿¡ Ãß°¡
+						// ï¿½è¿­ï¿½ï¿½ ï¿½ß°ï¿½
 						arr[nowLength++][i] = nowPoint.num;
 						arr[nowLength++][i] = nowPoint.cnt;
 					}
 
-					// »õ·Î µé¾î°£ ¼ö ±æÀÌ°¡ ÀÌÀüº¸´Ù ÀÛÀ»°æ¿ì 0À¸·Î ¹Ù²ãÁÜ
+					// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½î°£ ï¿½ï¿½ ï¿½ï¿½ï¿½Ì°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ï¿½ï¿½
 					if (nowLength <= row) {
 						for (int j = nowLength; j <= row; j++) {
 							arr[j][i] = 0;
 						}
 					}
 
-					// ÃÖ´ë col
+					// ï¿½Ö´ï¿½ col
 					maxRow = Math.max(nowLength-1, maxRow);
 				}
 				row = maxRow;

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_6064_Ä«À×´Þ·Â {
+public class ë°±ì¤€_6064_ì¹´ìž‰ë‹¬ë ¥ {
 	static int T,M,N,x,y,num;
 	
 	public static void main(String[] args)throws Exception {
@@ -45,8 +45,8 @@ public class ¹éÁØ_6064_Ä«À×´Þ·Â {
 	}
 	
 	
-	//lcm_ÃÖ¼Ò°ø¹è¼ö
-	//x,yÀÇ °öÀ» ÃÖ´ë°ø¾à¼ö·Î ³ª´«´Ù.
+	//lcm_ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ï¿½
+	//x,yï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	static int lcm(int x,int y) {
 		int gcd=gcd(x,y);
 		return x*y/gcd;

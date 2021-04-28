@@ -1,10 +1,10 @@
-package °³³äÁ¤¸®;
+package ê°œë…ì •ë¦¬;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ÃÖ´ë°ø¾à¼ö_ÃÖ¼Ò°ø¹è¼ö {
+public class ìµœëŒ€ê³µì•½ìˆ˜_ìµœì†Œê³µë°°ìˆ˜ {
 	static int x,y;
 	
 	public static void main(String[] args)throws Exception {
@@ -14,12 +14,12 @@ public class ÃÖ´ë°ø¾à¼ö_ÃÖ¼Ò°ø¹è¼ö {
 		x=Integer.parseInt(st.nextToken());
 		y=Integer.parseInt(st.nextToken());
 		
-		System.out.println("ÃÖ´ë°ø¾à¼ö:"+gcd(x,y));
-		System.out.println("ÃÖ¼Ò°ø¹è¼ö:"+lcm(x,y));
+		System.out.println("ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½:"+gcd(x,y));
+		System.out.println("ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ï¿½:"+lcm(x,y));
 	}
 	
-	//gcd-ÃÖ´ë°ø¾à¼ö
-	//x¸¦ y·Î ³ª´« ³ª¸ÓÁö°¡ 0º¸´Ù Å¬µ¿¾È ¹İº¹
+	//gcd-ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½
+	//xï¿½ï¿½ yï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½İºï¿½
 	static int gcd(int x,int y){
 		while(y!=0) {
 			int tmp=x%y;
@@ -30,8 +30,8 @@ public class ÃÖ´ë°ø¾à¼ö_ÃÖ¼Ò°ø¹è¼ö {
 	}
 	
 	
-	//lcm_ÃÖ¼Ò°ø¹è¼ö
-	//x,yÀÇ °öÀ» ÃÖ´ë°ø¾à¼ö·Î ³ª´«´Ù.
+	//lcm_ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ï¿½
+	//x,yï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
 	static int lcm(int x,int y) {
 		int gcd=gcd(x,y);
 		return x*y/gcd;

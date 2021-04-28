@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_3085_»çÅÁ°ÔÀÓ {
+public class ë°±ì¤€_3085_ì‚¬íƒ•ê²Œì„ {
 	static int N,answer=Integer.MIN_VALUE;
 	static int arr[][];
 	static boolean visited[][];
@@ -56,8 +56,8 @@ public class ¹éÁØ_3085_»çÅÁ°ÔÀÓ {
 			
 			if(nx<0||ny<0|nx>=N||ny>=N) continue;
 			
-			if(arr[nx][ny]!=arr[x][y]) {//¼­·Î ´Ù¸¥ ¼ıÀÚ¸é
-				int tmp=arr[x][y];//¹Ù²Ş
+			if(arr[nx][ny]!=arr[x][y]) {//ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½
+				int tmp=arr[x][y];//ï¿½Ù²ï¿½
 				arr[x][y]=arr[nx][ny];
 				arr[nx][ny]=tmp;
 				

@@ -6,7 +6,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
+public class ë°±ì¤€_17822_ì›íŒëŒë¦¬ê¸° {
 	static int N,M,T,answer;
 	static int xi,di,ki;
 	static int arr[][];
@@ -42,7 +42,7 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 			di=Integer.parseInt(st.nextToken());
 			ki=Integer.parseInt(st.nextToken());
 			
-			//1. xiÀÇ ¹è¼öÀÎ ¿ø¸¸ µ¹¸®±â
+			//1. xiï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			for (int i =1; i <= N/xi; i++) {
 				Deque<Integer> deque=new ArrayDeque<Integer>();
 				for (int j = 1; j <=M; j++) {
@@ -50,21 +50,21 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 				}
 				
 				if(di==0) {
-				//½Ã°è¹æÇâ	
+				//ï¿½Ã°ï¿½ï¿½ï¿½ï¿½	
 					for (int j = 0; j <ki; j++) {
 						int tmp=deque.removeLast();
 						deque.addFirst(tmp);
 					}
 				}
 				else {
-				//¹İ½Ã°è¹æÇâ
+				//ï¿½İ½Ã°ï¿½ï¿½ï¿½ï¿½
 					for (int j = 0; j <ki; j++) {
 						int tmp=deque.removeFirst();
 						deque.addLast(tmp);
 					}
 				}
 				
-				//µ¹¸° ÈÄ ´Ù½Ã ³Ö¾îÁÖ±â
+				//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ö¾ï¿½ï¿½Ö±ï¿½
 				for (int j = 1; j <=M; j++) {
 					arr[i*xi][j]=deque.poll();
 				}
@@ -81,7 +81,7 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 			
 			flag=false;
 			visited=new boolean[N+1][M+1];
-			//2. ÀÎÁ¢ ¼ö °°Àº°Å Ã£±â
+			//2. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½
 			for (int i = 1; i <= N; i++) {
 				for (int j = 1; j <= M; j++) {
 					if(arr[i][j]!=0) {
@@ -90,7 +90,7 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 				}
 			}
 			
-			//3. »óÇÏÁÂ¿ì ³¡ Ã¼Å©
+			//3. ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ ï¿½ï¿½ Ã¼Å©
 			for (int i = 1; i <= M; i++) {
 				for (int j = 1; j <=N-1; j++) {
 					if(arr[j][i]!=0&&arr[j][i]==arr[j+1][i]) {
@@ -111,19 +111,19 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 			
 
 			
-			//trueÀÎ°Å Áö¿öÁÜ
+			//trueï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			int sumAllNum=0;
 			int cntNum=0;
 			answer=0;
 			for (int i = 1; i <= N; i++) {
 				for (int j = 1; j <= M; j++) {
-					//¼ıÀÚ°¡ Á¸ÀçÇÏ¸é °³¼ö ¼¼ÁÖ±â
+					//ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ö±ï¿½
 					if(arr[i][j]!=0) cntNum++;
 					
 					sumAllNum+=arr[i][j];
 					
 					if(visited[i][j]==true) {
-						//trueÀÌ¸é 0À¸·Î Áö¿öÁÜ
+						//trueï¿½Ì¸ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 						arr[i][j]=0;
 					}
 					else {
@@ -133,8 +133,8 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 			}
 			
 			
-			//true°¡ ¾øÀ»°æ¿ì
-			//°°Àº °Ô ÇÏ³ªµµ ¾øÀ¸¸é Æò±Õ-1, +1
+			//trueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½-1, +1
 			if(flag==false) {
 				answer=0;
 				double everage=(double)sumAllNum/cntNum;
@@ -152,7 +152,7 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 				}
 			}
 //			
-//			System.out.println("+++++++++++Áö¿î ÈÄ +++++++++++++++");
+//			System.out.println("+++++++++++ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ +++++++++++++++");
 //			for (int i = 1; i <= N; i++) {
 //				for (int j = 1; j <= M; j++) {
 //					System.out.print(arr[i][j]);
@@ -174,11 +174,11 @@ public class ¹éÁØ_17822_¿øÆÇµ¹¸®±â {
 			int nx=dx[i]+x;
 			int ny=dy[i]+y;
 			
-			//¹üÀ§ ¹ş¾î³ª¸é ºüÀÌ
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î³ªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			if(nx<1||ny<1||nx>N||ny>M) continue;
 			
 			if(arr[x][y]==arr[nx][ny]) {
-				//°°À¸¸é
+				//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				flag=true;
 				visited[x][y]=true;
 				visited[nx][ny]=true;

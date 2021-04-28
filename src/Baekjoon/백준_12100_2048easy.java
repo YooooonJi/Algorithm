@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_12100_2048easy {
+public class ë°±ì¤€_12100_2048easy {
 	
 	static int N,max=Integer.MIN_VALUE;
 	static int arr[][];
@@ -13,8 +13,8 @@ public class ¹éÁØ_12100_2048easy {
 	static int dx[]= {-1,1,0,0};
 	static int dy[]= {0,0,-1,1};
 	static boolean flag=false;
-	//»ó0(ÇÏ),ÇÏ1(»ó),ÁÂ2(¿ì),¿ì3(ÁÂ)
-	//»ó->ÇÏ, ÇÏ->»ó, ÁÂ->¿ì, ¿ì->ÁÂ
+	//ï¿½ï¿½0(ï¿½ï¿½),ï¿½ï¿½1(ï¿½ï¿½),ï¿½ï¿½2(ï¿½ï¿½),ï¿½ï¿½3(ï¿½ï¿½)
+	//ï¿½ï¿½->ï¿½ï¿½, ï¿½ï¿½->ï¿½ï¿½, ï¿½ï¿½->ï¿½ï¿½, ï¿½ï¿½->ï¿½ï¿½
 	
 	public static void main(String[] args) throws Exception{
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
@@ -32,7 +32,7 @@ public class ¹éÁØ_12100_2048easy {
 		
 		
 		
-		//»óÇÏÁÂ¿ì permutation
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ permutation
 		permutation(0);
 		
 //		for (int i = 0; i <5; i++) {
@@ -99,7 +99,7 @@ public class ¹éÁØ_12100_2048easy {
 	
 	static void move(int moveNum) {
 		switch (moveNum) {
-		case 0://»ó
+		case 0://ï¿½ï¿½
 			for (int j = 0; j < N; j++) {
 				for (int i = 0; i < N; i++) {
 					if(arr[i][j]!=0) {
@@ -109,7 +109,7 @@ public class ¹éÁØ_12100_2048easy {
 				}
 			}
 			break;
-		case 1://ÇÏ
+		case 1://ï¿½ï¿½
 			for (int j = 0; j < N; j++) {
 				for (int i =N-1; i >=0; i--) {
 					if(arr[i][j]!=0) {
@@ -119,7 +119,7 @@ public class ¹éÁØ_12100_2048easy {
 				}
 			}
 			break;
-		case 2://ÁÂ
+		case 2://ï¿½ï¿½
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					if(arr[i][j]!=0) {
@@ -129,7 +129,7 @@ public class ¹éÁØ_12100_2048easy {
 				}
 			}
 			break;
-		case 3://¿ì
+		case 3://ï¿½ï¿½
 			for (int i = 0; i <N; i++) {
 				for (int j = N-1; j >=0 ; j--) {
 					if(arr[i][j]!=0) {

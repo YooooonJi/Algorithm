@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_20055_ÄÁº£ÀÌ¾îº§Æ®·Îº¿ {
+public class ë°±ì¤€_20055_ì»¨ë² ì´ì–´ë²¨íŠ¸ë¡œë´‡ {
 	static int N,K,zeronum,answer;
 	static ArrayList<Point> list1=new ArrayList<Point>();
 	static ArrayList<Integer> list2=new ArrayList<Integer>();
@@ -42,7 +42,7 @@ public class ¹éÁØ_20055_ÄÁº£ÀÌ¾îº§Æ®·Îº¿ {
 			
 			answer++;
 			
-			//1.È¸Àü
+			//1.È¸ï¿½ï¿½
 			Point end=list1.remove(list1.size()-1);
 			list1.add(0, end);
 			
@@ -59,7 +59,7 @@ public class ¹éÁØ_20055_ÄÁº£ÀÌ¾îº§Æ®·Îº¿ {
 				list1.set(N-1, new Point(list1.get(N-1).weight,false));
 			}
 			
-			//2.·Îº¿ ÀÌµ¿
+			//2.ï¿½Îºï¿½ ï¿½Ìµï¿½
 			for (int i = 0; i < list2.size(); i++) {
 				int idx=(list2.get(i)+1)%(2*N);
 				if(list1.get(idx).weight>0&&list1.get(idx).flag==false) {
@@ -81,7 +81,7 @@ public class ¹éÁØ_20055_ÄÁº£ÀÌ¾îº§Æ®·Îº¿ {
 			//}
 			
 			
-			//3.¿Ã¶ó°¡´Â À§Ä¡
+			//3.ï¿½Ã¶ó°¡´ï¿½ ï¿½ï¿½Ä¡
 			if(list1.get(0).weight>0&&list1.get(0).flag==false) {
 				int tmp=list1.get(0).weight-1;
 				list1.set(0,new Point(tmp,true));

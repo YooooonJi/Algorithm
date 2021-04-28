@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class SW_1949_µî»ê·ÎÁ¶¼º {
+public class SW_1949_ë“±ì‚°ë¡œì¡°ì„±{
 	
 	static int T,N,K,maxNum=Integer.MIN_VALUE,maxDepth=Integer.MIN_VALUE;
 	static int arr[][];

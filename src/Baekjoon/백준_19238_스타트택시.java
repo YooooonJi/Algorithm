@@ -8,7 +8,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
+public class ë°±ì¤€_19238_ìŠ¤íƒ€íŠ¸íƒì‹œ {
 	static int N,M,oil,distance;
 	static int taxi_x,taxi_y;
 	static Variety map[][];
@@ -53,8 +53,8 @@ public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
 		int type,number;
 
 		public Variety(int type,int number) {
-			this.type = type;//0:¾Ï°Íµµ¾øÀ½, 1:º®, 2:»ç¶÷
-			this.number = number;//¹øÈ£
+			this.type = type;//0:ï¿½Ï°Íµï¿½ï¿½ï¿½ï¿½ï¿½, 1:ï¿½ï¿½, 2:ï¿½ï¿½ï¿½
+			this.number = number;//ï¿½ï¿½È£
 		}
 	}
 	
@@ -91,17 +91,17 @@ public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			int flag_y=Integer.parseInt(st.nextToken());
 			map[person_x][person_y]=new Variety(2,i+1);
 			//map[flag_x][flag_y]=new Variety(3,i+1);
-			//flag¹è¿­¿¡ x,y,»ç¶÷°ú °Å¸® ³Ö¾îÁÜ
+			//flagï¿½è¿­ï¿½ï¿½ x,y,ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½
 			flag[i+1]=new Point(flag_x,flag_y,0);
 		}
 		
 		while(oil>0&&M>0) {
 			pq.clear();
 			queue.clear();
-			//1. »ç¶÷°ú ÅÃ½ÃÀÇ ÃÖ´Ü°Å¸® ±¸ÇÏ±â
+			//1. ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã½ï¿½ï¿½ï¿½ ï¿½Ö´Ü°Å¸ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½
 			bfs();
 			
-			//2.Á¦ÀÏ °¡±î¿î »ç¶÷ Ã£°í, ¸ñÀûÁö±îÁö ÀÌµ¿
+			//2.ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
 			
 			if(pq.isEmpty()==true) {
 				System.out.println("-1");
@@ -109,27 +109,27 @@ public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			}
 			Point person=pq.poll();
 			
-			oil-=person.depth;//»ç¶÷ ÀÚ¸®±îÁö ÀÌµ¿
+			oil-=person.depth;//ï¿½ï¿½ï¿½ ï¿½Ú¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
 			
-			if(oil<0) {//¿¬·á ¹Ù´Ú?
+			if(oil<0) {//ï¿½ï¿½ï¿½ï¿½ ï¿½Ù´ï¿½?
 				System.out.println("-1");
 				return;
 			}
 			
-			int number=map[person.x][person.y].number;//¸ñÀûÁö ³Ñ¹ö
+			int number=map[person.x][person.y].number;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½
 			
 			visited=new boolean[N+1][N+1];
-			boolean avail=check(person.x,person.y,flag[number].x,flag[number].y);//¸ñÀûÁö±îÁö °¥¼öÀÖ´ÂÁö
+			boolean avail=check(person.x,person.y,flag[number].x,flag[number].y);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½
 			if(avail==false) {
 				System.out.println("-1");
 				return;
 			}
 			
-			oil=oil-distance;//¸ñÀûÁö±îÁö ÀÌµ¿
+			oil=oil-distance;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
 			taxi_x=flag[number].x;
 			taxi_y=flag[number].y;
 			
-			if(oil<0) {//¿¬·á ¹Ù´Ú?
+			if(oil<0) {//ï¿½ï¿½ï¿½ï¿½ ï¿½Ù´ï¿½?
 				System.out.println("-1");
 				return;
 			}
@@ -137,7 +137,7 @@ public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			map[person.x][person.y]=new Variety(0,0);
 			M--;
 			
-			//¿ÀÀÏ ÃæÀü
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			oil=oil+2*(distance);		
 		}
 		
@@ -153,7 +153,7 @@ public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			for (int i = 0; i < 4; i++) {
 				int nx=now.x+dx[i];
 				int ny=now.y+dy[i];
-				//¹üÀ§ ³ª°¡°Å³ª, º®ÀÌ°Å³ª, visitÇßÀ¸¸é
+				//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½, ï¿½ï¿½ï¿½Ì°Å³ï¿½, visitï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(nx>=N+1||ny>=N+1||nx<1||ny<1||map[nx][ny].type==1||visited[nx][ny]==true) continue;
 				visited[nx][ny]=true;
 				if(nx==f_x&&ny==f_y) {
@@ -170,7 +170,7 @@ public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
 		visited=new boolean[N+1][N+1];
 		queue.add(new Point(taxi_x,taxi_y,0));
 		
-		if(map[taxi_x][taxi_y].type==2) {//»ç¶÷ÀÌ¸é
+		if(map[taxi_x][taxi_y].type==2) {//ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½
 			pq.add(new Point(taxi_x,taxi_y,0));
 		}
 		
@@ -179,11 +179,11 @@ public class ¹éÁØ_19238_½ºÅ¸Æ®ÅÃ½Ã {
 			for (int i = 0; i < 4; i++) {
 				int nx=now.x+dx[i];
 				int ny=now.y+dy[i];
-				//¹üÀ§ ³ª°¡°Å³ª, º®ÀÌ°Å³ª, visitÇßÀ¸¸é
+				//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½, ï¿½ï¿½ï¿½Ì°Å³ï¿½, visitï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(nx>=N+1||ny>=N+1||nx<1||ny<1||map[nx][ny].type==1||visited[nx][ny]==true) continue;
 				visited[nx][ny]=true;
 				queue.add(new Point(nx,ny,now.depth+1));
-				if(map[nx][ny].type==2) {//»ç¶÷ÀÌ¸é
+				if(map[nx][ny].type==2) {//ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½
 					//System.out.println(nx+" "+ny+" "+(now.depth+1));
 					pq.add(new Point(nx,ny,now.depth+1));
 				}

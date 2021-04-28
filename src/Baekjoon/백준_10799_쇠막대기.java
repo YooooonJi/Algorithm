@@ -3,7 +3,7 @@ package Baekjoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class ¹éÁØ_10799_¼è¸·´ë±â {
+public class ë°±ì¤€_10799_ì‡ ë§‰ëŒ€ê¸° {
 	static String s;
 	static char galho[];
 	static int arr[];

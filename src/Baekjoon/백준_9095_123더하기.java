@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_9095_123´õÇÏ±â {
+public class ë°±ì¤€_9095_123ë”í•˜ê¸° {
 	static int T,n,answer;
 	
 	public static void main(String[] args) throws Exception{
@@ -26,13 +26,13 @@ public class ¹éÁØ_9095_123´õÇÏ±â {
 	}
 	
 	static void dfs(int n,int idx,int sum) {
-		//nº¸´Ù Ä¿Á³À» °æ¿ì Á¾·á
+		//nï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		sum+=idx;
 		if(sum>n) {
 			return;
 		}
 		
-		//nÀÌ¶û °°À¸¸é answer 1 Áõ°¡
+		//nï¿½Ì¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ answer 1 ï¿½ï¿½ï¿½ï¿½
 		if(sum==n) {
 			answer++;
 			return;

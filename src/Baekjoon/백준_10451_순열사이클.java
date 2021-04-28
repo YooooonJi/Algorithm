@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_10451_¼ø¿­»çÀÌÅ¬ {
+public class ë°±ì¤€_10451_ìˆœì—´ì‚¬ì´í´ {
 	static int T,N,answer;
 	static int arr[][];
 	static boolean visited[];

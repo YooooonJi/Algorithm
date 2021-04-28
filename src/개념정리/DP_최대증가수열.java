@@ -1,4 +1,4 @@
-package 알고리즘개념정리;
+package 개념정리;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -35,6 +35,10 @@ public class DP_최대증가수열 {
 				}
 			}
 			answer=Math.max(answer,dp[i]);//dp배열중 제일 큰거(제일 길다는 뜻) 찾음
+		}
+		
+		for (int i = 0; i < dp.length; i++) {
+			System.out.print(dp[i]);
 		}
 		
 		System.out.println(answer);

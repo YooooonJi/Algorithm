@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class ±×·¡ÇÁ_°¡Àå¸Õ³ëµå {
+public class ê·¸ëž˜í”„_ê°€ìž¥ë¨¼ë…¸ë“œ {
 	
 	static int n,max=Integer.MIN_VALUE,result;
 	static int[][] vertex= {{3,6},{4,3},{3,2},{1,3},{1,2},{2,4},{5,2}};

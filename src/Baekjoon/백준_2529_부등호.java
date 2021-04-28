@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 
 
-public class ¹éÁØ_2529_ºÎµîÈ£ {
+public class ë°±ì¤€_2529_ë¶€ë“±í˜¸ {
 	static int k;
 	static long max=Long.MIN_VALUE,min=Long.MAX_VALUE;
 	static int tgt[],src[],compare[];
@@ -31,7 +31,7 @@ public class ¹éÁØ_2529_ºÎµîÈ£ {
 		
 		st=new StringTokenizer(br.readLine());
 		for (int i = 0; i < k; i++) {
-			//<ÀÌ¸é 1 , >ÀÌ¸é 0
+			//<ï¿½Ì¸ï¿½ 1 , >ï¿½Ì¸ï¿½ 0
 			if(st.nextToken().equals("<")){
 				compare[i]=1;
 			}
@@ -72,29 +72,29 @@ public class ¹éÁØ_2529_ºÎµîÈ£ {
 	}
 	
 	static void smallDfs(int tgt_idx,int src_idx) {
-		//tgt¹è¿­¿¡ ´Ù Ã¤¿üÀ»°æ¿ì
+		//tgtï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if(tgt_idx==k+1) {
 			long number=0;
-			//½ÇÁ¦ ¼ýÀÚ¸¦ ±¸ÇÔ
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i < k+1; i++) {
 				number+=tgt[i]*Math.pow(10, k-i);
 			}
-			//ÃÖ´ëÃ£±â
+			//ï¿½Ö´ï¿½Ã£ï¿½ï¿½
 			min=Math.min(min,number);
 			return;
 		}
 		
-		//Ã³À½ÀÏ°æ¿ì
+		//Ã³ï¿½ï¿½ï¿½Ï°ï¿½ï¿½
 		if(tgt_idx==0) {
 			tgt[tgt_idx]=src[src_idx];
 			used[src_idx]=true;
 			smallDfs(tgt_idx+1,src_idx);
 			used[src_idx]=false;
 		}
-		//µÎ¹øÂ° ÀÌ»óºÎÅÍ
+		//ï¿½Î¹ï¿½Â° ï¿½Ì»ï¿½ï¿½ï¿½ï¿½
 		else {
 			boolean check=false;
-			//<ÀÏ°æ¿ì
+			//<ï¿½Ï°ï¿½ï¿½
 			if(compare[tgt_idx-1]==1) {
 				check=false;
 				for (int i = 0; i < 10; i++) {
@@ -107,12 +107,12 @@ public class ¹éÁØ_2529_ºÎµîÈ£ {
 					}
 				}
 				
-				//Á¶°Ç¿¡ ¸Â´Â°Ô ÇÑ°³µµ ¾øÀ¸¸é
+				//ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½Â´Â°ï¿½ ï¿½Ñ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(check==false) {
 					return;
 				}
 			}
-			//>ÀÏ°æ¿ì
+			//>ï¿½Ï°ï¿½ï¿½
 			else if(compare[tgt_idx-1]==0) {
 				check=false;
 				for (int i = 0; i < 10; i++) {
@@ -125,7 +125,7 @@ public class ¹éÁØ_2529_ºÎµîÈ£ {
 					}
 				}
 				
-				//Á¶°Ç¿¡ ¸Â´Â°Ô ÇÑ°³µµ ¾øÀ¸¸é
+				//ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½Â´Â°ï¿½ ï¿½Ñ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(check==false) {
 					return;
 				}				
@@ -135,29 +135,29 @@ public class ¹éÁØ_2529_ºÎµîÈ£ {
 	}
 	
 	static void bigDfs(int tgt_idx,int src_idx) {
-		//tgt¹è¿­¿¡ ´Ù Ã¤¿üÀ»°æ¿ì
+		//tgtï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ Ã¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if(tgt_idx==k+1) {
 			long number=0;
-			//½ÇÁ¦ ¼ýÀÚ¸¦ ±¸ÇÔ
+			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i < k+1; i++) {
 				number+=tgt[i]*Math.pow(10, k-i);	
 			}
-			//ÃÖ´ëÃ£±â
+			//ï¿½Ö´ï¿½Ã£ï¿½ï¿½
 			max=Math.max(max,number);
 			return;
 		}
 		
-		//Ã³À½ÀÏ°æ¿ì
+		//Ã³ï¿½ï¿½ï¿½Ï°ï¿½ï¿½
 		if(tgt_idx==0) {
 			tgt[tgt_idx]=src[src_idx];
 			used[src_idx]=true;
 			bigDfs(tgt_idx+1,src_idx);
 			used[src_idx]=false;
 		}
-		//µÎ¹øÂ° ÀÌ»óºÎÅÍ
+		//ï¿½Î¹ï¿½Â° ï¿½Ì»ï¿½ï¿½ï¿½ï¿½
 		else {
 			boolean check=false;
-			//<ÀÏ°æ¿ì
+			//<ï¿½Ï°ï¿½ï¿½
 			if(compare[tgt_idx-1]==1) {
 				check=false;
 				for (int i = 9; i>=0; i--) {
@@ -170,12 +170,12 @@ public class ¹éÁØ_2529_ºÎµîÈ£ {
 					}
 				}
 				
-				//Á¶°Ç¿¡ ¸Â´Â°Ô ÇÑ°³µµ ¾øÀ¸¸é
+				//ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½Â´Â°ï¿½ ï¿½Ñ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(check==false) {
 					return;
 				}
 			}
-			//>ÀÏ°æ¿ì
+			//>ï¿½Ï°ï¿½ï¿½
 			else if(compare[tgt_idx-1]==0) {
 				check=false;
 				for (int i = 9; i >=0; i--) {
@@ -188,7 +188,7 @@ public class ¹éÁØ_2529_ºÎµîÈ£ {
 					}
 				}
 				
-				//Á¶°Ç¿¡ ¸Â´Â°Ô ÇÑ°³µµ ¾øÀ¸¸é
+				//ï¿½ï¿½ï¿½Ç¿ï¿½ ï¿½Â´Â°ï¿½ ï¿½Ñ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				if(check==false) {
 					return;
 				}				

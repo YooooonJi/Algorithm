@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_11286_Àý´ñ°ªÈü {
+public class ë°±ì¤€_11286_ì ˆëŒ“ê°’íž™{
 	static int N,x;
 	static PriorityQueue<Number> pq=new PriorityQueue<Number>();
 	static public class Number implements Comparable<Number>{

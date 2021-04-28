@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class ¹éÁØ_1062_°¡¸£Ä§ {
+public class ë°±ì¤€_1062_ê°€ë¥´ì¹¨ {
 	static int N,K,max=Integer.MIN_VALUE;
 	static boolean alpha[]=new boolean[26];
 	static String word[];
@@ -40,7 +40,7 @@ public class ¹éÁØ_1062_°¡¸£Ä§ {
 		
 	}
 	static void dfs(int num, int cnt) {
-		if(cnt==0) {//´Ü¾î ´Ù ¾Ë·ÁÁáÀ¸¸é
+		if(cnt==0) {//ï¿½Ü¾ï¿½ ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			int tmp_answer=0;
 			for (int i = 0; i <N; i++) {
 				boolean flag=true;

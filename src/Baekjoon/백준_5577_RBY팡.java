@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class πÈ¡ÿ_5577_RBY∆Œ {
+public class Î∞±Ï§Ä_5577_RBYÌå° {
 	static int N,answer,min=Integer.MAX_VALUE;
 	static ArrayList<Integer> list=new ArrayList<Integer>();
 	static ArrayList<Integer> tmp_list=new ArrayList<Integer>();
@@ -121,7 +121,7 @@ public class πÈ¡ÿ_5577_RBY∆Œ {
 	}
 	
 	static void del(int start,int idx,int cnt) {
-		//≥°±Ó¡ˆ »Æ¿Œ«ﬂ¿ª ∂ß
+		//ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ »ÆÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩ
 		if(idx>list.size()-1) { 
 			return;
 		}
@@ -130,26 +130,26 @@ public class πÈ¡ÿ_5577_RBY∆Œ {
 				for (int i =start; i <(start+cnt-1); i++) {
 					list.remove(start);
 				}
-				//¡ˆøÓ∏∏≈≠ N πŸ≤ﬁ
+				//ÔøΩÔøΩÔøΩÓ∏∏≈≠ N ÔøΩŸ≤ÔøΩ
 				return;
 			}
 		}
 		if(visited[idx]==false) {
-			//∞∞¿∫∞≈ 4∞≥¿ÃªÛ √£æ“¿ª∂ß
+			//ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ 4ÔøΩÔøΩÔøΩÃªÔøΩ √£ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ
 			if(cnt>=5) {
 				for (int i =start; i <(start+cnt-1); i++) {
 					list.remove(start);
 				}
-				//¡ˆøÓ∏∏≈≠ N πŸ≤ﬁ
+				//ÔøΩÔøΩÔøΩÓ∏∏≈≠ N ÔøΩŸ≤ÔøΩ
 				return;
 			}
-			//√£¡ˆ ∏¯«ﬂ¿ª ∂ß
+			//√£ÔøΩÔøΩ ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ ÔøΩÔøΩ
 			else {
 				del(idx+1,idx+1,1);
 			}
 		}
 		
-		//∂« true¿œ∂ß
+		//ÔøΩÔøΩ trueÔøΩœ∂ÔøΩ
 		if(visited[idx]==true) {
 			del(start,idx+1,++cnt);
 		}

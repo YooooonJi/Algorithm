@@ -1,4 +1,4 @@
-package 알고리즘개념정리;
+package 개념정리;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
