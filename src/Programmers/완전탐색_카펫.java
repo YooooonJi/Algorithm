@@ -9,12 +9,28 @@ public class 완전탐색_카펫{
 	
 	static public int[] solution(int brown, int yellow) {
         int[] answer =new int[2];
-        
-        double x1=((brown/2+2)+Math.sqrt(Math.pow(brown/2+2,2)-4*(brown+yellow)))/2;
-        double y1=brown/2+2-x1;
+        int width=0;
+        int height=0;
 
-        answer[0]=(int)x1;
-        answer[1]=(int)y1;
+        //2*x+2*y-4=brown
+        //x+y=(brown+4)/2
+        //(x-2)*(y-2)=yellow
+        
+        for (int i =3; i<(brown+4)/2; i++) {
+			height=i;
+        	width=(brown+4)/2-height;
+			
+			if(height>width) {
+				continue;
+			}
+			
+			if((height-2)*(width-2)==yellow) {
+				break;
+			}
+		}
+        
+        answer[0]=width;
+        answer[1]=height;
         return answer;
     }
 	

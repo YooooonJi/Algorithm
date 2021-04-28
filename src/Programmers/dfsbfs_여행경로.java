@@ -1,8 +1,6 @@
 package Programmers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
@@ -36,7 +34,6 @@ public class dfsbfs_여행경로 {
 	        arr=new int[size][size];
 	        visited=new boolean[size][size];
 	        
-	        //�ؽøʿ� ������� �ֱ�
 	        int num=0;
 	        while(!pq.isEmpty()) {
 	        	String tmp=pq.poll();
@@ -57,20 +54,11 @@ public class dfsbfs_여행경로 {
 	        
 	        dfs(hm.get("ICN"),0,list);
 	        
-//	        System.out.println("answer");
-//	        for (int i = 0; i < answer.length; i++) {
-//				System.out.print(answer[i]);
-//			}
-	        
 	        return answer;
 	    }
 	
 	static void dfs(int start,int ticket_tmp,ArrayList<String> list) {
 		list.add(hm2.get(start));
-		for (int i = 0; i <list.size(); i++) {
-			System.out.print(list.get(i));
-		}
-		System.out.println();
 		for(int i=0;i<arr.length;i++) {
 			if(arr[start][i]==1&&visited[start][i]!=true) {
 				visited[start][i]=true;
